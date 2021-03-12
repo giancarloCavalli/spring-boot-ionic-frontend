@@ -3,7 +3,6 @@ import { ErrorHandler, NgModule } from '@angular/core';
 import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 
 import { MyApp } from './app.component';
-import { HomePage } from '../pages/home/home';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -12,8 +11,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 @NgModule({
   //lista de componentes ou paginas que fazem parte desse modulo
   declarations: [
-    MyApp,
-    HomePage
+    MyApp
   ],
   //define a dependencia de outros modulos
   imports: [
@@ -24,8 +22,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
   bootstrap: [IonicApp],
   //quando for uma pagina, e nao somente um componente, tem que ter as mesmas informacoes que o atributo declaration
   entryComponents: [
-    MyApp,
-    HomePage
+    MyApp
   ],
   //define quais objetos que vc injetar nesse modulo vao ter uma instancia unica
   providers: [
