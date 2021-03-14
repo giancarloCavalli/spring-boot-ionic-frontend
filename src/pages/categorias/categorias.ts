@@ -33,8 +33,8 @@ export class CategoriasPage {
       .subscribe(response => {
         this.items = response;
       },
-      error => {
-        console.log(error);
-      });
+      //Mesmo nao fazendo nada, essa declaracao de error fica aqui para que o erro estoure
+      // no interceptor, e não aqui
+      error => {});
   }
 }
