@@ -3,6 +3,7 @@ import { IonicPage, NavController } from 'ionic-angular';
 import { MenuController } from 'ionic-angular/components/app/menu-controller';
 import { timestamp } from 'rxjs/operators';
 import { CredenciaisDTO } from '../../models/credenciais.dto';
+import { AuthService } from '../../services/auth.service';
 
 //vou poder referenciar essa classe com o nome dela entre "" (como String)
 @IonicPage()
@@ -19,8 +20,10 @@ export class HomePage {
   };
 
   //objetos injetados na classe sao os passados no parametro do construtor
-  constructor(public navCtrl: NavController, public menu: MenuController) {
-    
+  constructor(
+    public navCtrl: NavController,
+    public menu: MenuController,
+    public auth: AuthService) {
   }
 
   ionViewWillEnter() {
@@ -32,7 +35,11 @@ export class HomePage {
   }
 
   login() {
-    console.log(this.creds);
-    this.navCtrl.setRoot('CategoriasPage');
+    this.auth.authenticate(this.creds)
+      .subscribe(response => {
+        console.log(response.headers.get('Authorization'));
+        this.navCtrl.setRoot('CategoriasPage');
+      },
+      error => {})
   }
 }
