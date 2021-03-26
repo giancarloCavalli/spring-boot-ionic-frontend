@@ -35,6 +35,7 @@ export class ProfilePage {
           }
         });
     } else {
+      //A responsabilidade por um redirecionamento de página é do controlador, por isso está aqui o código seguinte (e não lá no errorInterceptor)
       this.navCtrl.setRoot('HomePage');
     }
   }
