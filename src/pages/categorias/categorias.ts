@@ -37,4 +37,8 @@ export class CategoriasPage {
       // no interceptor, e não aqui
       error => {});
   }
+
+  showProdutos() {
+    this.navCtrl.push('ProdutosPage');
+  }
 }
