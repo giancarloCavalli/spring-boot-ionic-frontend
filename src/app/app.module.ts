@@ -15,6 +15,7 @@ import { ClienteService } from '../services/domain/cliente.service';
 import { AuthInterceptorProvider } from '../interceptors/auth-interceptor';
 import { ProdutoService } from '../services/domain/produto.service';
 import { CartService } from '../services/domain/cart.service';
+import { ImageUtilService } from '../services/image-util.service';
 
 //Decorator. Anotacao com configuracoes para alterar a classe
 @NgModule({
@@ -46,7 +47,8 @@ import { CartService } from '../services/domain/cart.service';
     StorageService,
     ClienteService,
     ProdutoService,
-    CartService
+    CartService,
+    ImageUtilService
   ]
 })
 export class AppModule {}
