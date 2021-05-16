@@ -1,5 +1,5 @@
 # Online Shopping (front-end)
-[![NPM](https://img.shields.io/npm/l/react)](https://github.com/giancarloCavalli/spring-boot-ionic-backend/blob/master/LICENSE) 
+[![NPM](https://img.shields.io/npm/l/react)](https://github.com/giancarloCavalli/spring-boot-ionic-frontend/blob/master/LICENSE) 
 
 ## About the project
 Online shopping is a full stack application that works as an e-commerce. It was built during the course named "Spring Boot, Hibernate, REST, Ionic, JWT, S3, MySQL, MongoDB" from Udemy. Thanks to professor [Nelio Alves](https://github.com/acenelio), his didactics are amazing.
